@@ -6,6 +6,7 @@
   --padding: 2em;
   --gap: 4em;
   --radius: 1em;
+  --shadow:0 0.25vw 1vw  0 rgba(0,0,0,0.5);
 }
 
 html {
@@ -84,6 +85,10 @@ img {
   gap: var(--gap);
 }
 
+.shadow {
+  box-shadow: var(--shadow);
+}
+
 .container {	
   display: grid;
   width: clamp(320px, 90vw, 80em);
@@ -91,11 +96,9 @@ img {
 
 .card {
   display: grid;
-  grid-template-rows: fr fr;
-	padding: calc(var(--padding)*2);
-	border-radius: var(--radius);
-	overflow: hidden;
-	box-shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.5);
+  padding: calc(var(--padding)*2);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
 .card1 {
