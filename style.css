@@ -1,7 +1,11 @@
 :root {
-  --html-color: dodgerblue;
+  --html-color: darkturquoise;
   --main-bg-color: white;
   --text-dark: darkslategrey;
+  --mbe: 4em;
+  --padding: 2em;
+  --gap: 4em;
+  --radius: 1em;
 }
 
 html {
@@ -20,22 +24,93 @@ body {
   background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
-  align-content: space-between:
+  align-content: space-between;
 }
+
 
 h1 {
   font-size:clamp(2.5rem, 5vw,  80px);
+}
+
+h2 {
+  font-size:clamp(2rem, 3vw,  50px);
 }
 
 p {
   line-height: 1.5;
 }
 
+section {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(
+  auto-fit,
+  minmax(20em, 1fr));
+  gap: var(--gap);
+}
+
+footer {
+  margin-block-start: auto;
+}
+
+img {
+  width: 4em;
+  margin-left: auto;
+  padding-block-start: var(--padding);
+}
+
 .wrapper {
   min-height: 100vh;
   display:flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;	
+  margin: 2em 0;
 }
+
+.center {
+  text-align: center;
+}
+
+.mbe {
+  margin-block-end: var(--mbe);
+}
+
+.padding {
+  padding: var(--padding);
+}
+
+.gap {
+  gap: var(--gap);
+}
+
+.container {	
+  display: grid;
+  width: clamp(320px, 90vw, 80em);
+}
+
+.card {
+  display: grid;
+  grid-template-rows: fr fr;
+	padding: calc(var(--padding)*2);
+	border-radius: var(--radius);
+	overflow: hidden;
+	box-shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.5);
+}
+
+.card1 {
+  border-block-start: 0.5em  solid darkturquoise;
+}
+
+.card2 {
+  border-block-start: 0.5em  solid deeppink;
+}
+
+.card3 {
+  border-block-start: 0.5em  solid gold;
+}
+
+.card4 {
+  border-block-start: 0.5em  solid dodgerblue;
+}
+
